@@ -1,0 +1,9 @@
+Hello sir/mam,
+
+Created a web page using Javascript and bootstrap in html.
+There are 3 main Sections:
+1.Header is created using bootstrap and printing the current date automatically by getting current date, month amd year. 
+2.For selecting All the states and selecting some states have written logic in javascript and for selecting used type checkbox and added all the states in the head tag inside script tag the function is declared and called that function name in the body tag by using on click attribute.
+3.Barchart has been designed usung Jquery, covid cases that are confirmed according to states has been mentioned and in the head tag inside script tag the function is declared and on loading that function it is executed in the body tag .
+
+Thank you

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Covid page</title>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+	crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+	integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+	crossorigin="anonymous"></script>
+<script
+	src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+	integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+	crossorigin="anonymous"></script>
+<script
+	src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+	integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+	crossorigin="anonymous"></script>
+<script type="text/javascript">
+	function selects() {
+		var ele = document.getElementsByName('state');
+		for (var i = 0; i < ele.length; i++) {
+			if (ele[i].type == 'checkbox')
+				ele[i].checked = true;
+		}
+	}
+	 
+	 
+window.onload = function () {
+
+var options = {
+	title: {
+		text: "Testetd Confirmed and recovered stats"              
+	},
+	data: [              
+	{
+		type: "column",
+		dataPoints: [
+			{ label: "Delhi",  y: 15  },
+			{ label: "Karnataka", y: 17  },
+			{ label: "Sikkim", y: 22  },
+			{ label: "J&K",  y: 26  },
+			{ label: "Kerala",  y: 27 },
+			{ label: "Mizoram",  y: 39 },
+			{ label: "Uttarakhand",  y: 61 },
+			{ label: "Himachal",  y: 64 }
+			
+			
+		]
+	}
+	]
+};
+
+$("#chartContainer").CanvasJSChart(options);
+}
+</script>
+<style type="text/css">
+aside {
+	width: 20%;
+	padding-left: 5px;
+	float: left;
+	font-style: italic;
+	background-color: lightgray;
+}
+
+section {
+	width: 80%;
+	float: right;
+}
+</style>
+</head>
+<body>
+	<nav class="navbar navbar-light" style="background-color: pink;">
+		<input type="text" id="currentDate"> <br> <br>
+		<script>
+			var today = new Date();
+			var date = today.getDate() + '-' + (today.getMonth() + 1) + '-'
+					+ today.getFullYear();
+			var date = date;
+			document.getElementById("currentDate").value = date;
+		</script>
+	</nav>
+	<aside>
+
+		<input type="checkbox" onclick='selects()' value="Select State" />Select
+		State <br> <input type="checkbox" name="state"
+			value="Andhra Pradesh">Andhra Pradesh<br> <input
+			type="checkbox" name="state" value="Arunachal Pradesh">Arunachal
+		Pradesh<br> <input type="checkbox" name="state" value="Assam">Assam<br>
+		<input type="checkbox" name="state" value="Bihar">Bihar<br>
+		<input type="checkbox" name="state" value="Chhattisgarh">Chhattisgarh<br>
+		<input type="checkbox" name="state" value="Goa">Goa<br> <input
+			type="checkbox" name="state" value="Gujarat">Gujarat<br>
+		<input type="checkbox" name="state" value="Haryana">Haryana<br>
+		<input type="checkbox" name="state" value="Himachal Pradesh">Himachal
+		Pradesh<br> <input type="checkbox" name="state"
+			value="Jammu and Kashmir">Jammu and Kashmir<br> <input
+			type="checkbox" name="state" value="Jharkhand">Jharkhand<br>
+		<input type="checkbox" name="state" value="Karnataka">Karnataka<br>
+		<input type="checkbox" name="state" value="Kerala">Kerala<br>
+		<input type="checkbox" name="state" value="Madhya Pradesh">Madhya
+		Pradesh<br> <input type="checkbox" name="state"
+			value="Maharashtra">Maharashtra<br> <input
+			type="checkbox" name="state" value="Manipur">Manipur<br>
+		<input type="checkbox" name="state" value="Meghalaya">Meghalaya<br>
+		<input type="checkbox" name="state" value="Mizoram">Mizoram<br>
+		<input type="checkbox" name="state" value="Nagaland">Nagaland<br>
+		<input type="checkbox" name="state" value="Orissa">Orissa<br>
+		<input type="checkbox" name="state" value="Punjab">Punjab<br>
+		<input type="checkbox" name="state" value="Rajasthan">Rajasthan<br>
+		<input type="checkbox" name="state" value="Sikkim">Sikkim<br>
+		<input type="checkbox" name="state" value="Tamil Nadu">Tamil
+		Nadu<br> <input type="checkbox" name="state" value="Tripura">Tripura<br>
+		<input type="checkbox" name="state" value="Uttarakhand">Uttarakhand<br>
+		<input type="checkbox" name="state" value="Uttar Pradesh">Uttar
+		Pradesh<br> <input type="checkbox" name="state"
+			value="West Bengal">West Bengal<br> <input
+			type="checkbox" name="state" value="Andaman and Nicobar Islands">Andaman
+		and Nicobar Islands<br> <input type="checkbox" name="state"
+			value="Chandigarh">Chandigarh<br> <input type="checkbox"
+			name="state" value="Dadra and Nagar Haveli">Dadra and Nagar
+		Haveli<br> <input type="checkbox" name="state"
+			value="Daman and Diu">Daman and Diu<br> <input
+			type="checkbox" name="state" value="Delhi">Delhi<br> <input
+			type="checkbox" name="state" value="Lakshadweep">Lakshadweep<br>
+		<input type="checkbox" name="state" value="Pondicherry">Pondicherry<br>
+	</aside>
+	<section>
+	 <div id="chartContainer" style="height: 370px; width: 100%;"></div>
+<script type="text/javascript" src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+	</section>
+</body>
+</html>
